@@ -103,6 +103,9 @@ def initialize_database():
                     db.session.add(shipment)
             db.session.commit()
 
+with app.app_context():
+    initialize_database()
+
 # --- TEMPLATE FILTERS & CONTEXT ---
 
 @app.template_filter('currency')
@@ -266,5 +269,4 @@ def process_emails():
     return redirect(url_for('emails'))
 
 if __name__ == '__main__':
-    initialize_database()
     app.run(debug=True, host='127.0.0.1', port=5000)
