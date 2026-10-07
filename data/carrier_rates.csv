@@ -1,0 +1,101 @@
+carrier,origin_port,destination_port,container_type,rate_usd,transit_days
+OceanLink Lines,Nhava Sheva,Los Angeles,20ft,2220,28
+OceanLink Lines,Nhava Sheva,Los Angeles,40ft,3830,28
+BlueWave Shipping,Nhava Sheva,Los Angeles,20ft,2040,31
+BlueWave Shipping,Nhava Sheva,Los Angeles,40ft,3550,31
+GlobalMariner,Nhava Sheva,Los Angeles,20ft,2360,26
+GlobalMariner,Nhava Sheva,Los Angeles,40ft,4330,26
+PacificStar Line,Nhava Sheva,Los Angeles,20ft,2170,29
+PacificStar Line,Nhava Sheva,Los Angeles,40ft,3740,29
+AtlasSea Carriers,Nhava Sheva,Los Angeles,20ft,2230,27
+AtlasSea Carriers,Nhava Sheva,Los Angeles,40ft,3980,27
+OceanLink Lines,Nhava Sheva,New York,20ft,2460,33
+OceanLink Lines,Nhava Sheva,New York,40ft,4460,33
+BlueWave Shipping,Nhava Sheva,New York,20ft,2310,36
+BlueWave Shipping,Nhava Sheva,New York,40ft,4040,36
+GlobalMariner,Nhava Sheva,New York,20ft,2560,30
+GlobalMariner,Nhava Sheva,New York,40ft,4690,30
+PacificStar Line,Nhava Sheva,New York,20ft,2430,33
+PacificStar Line,Nhava Sheva,New York,40ft,4290,33
+AtlasSea Carriers,Nhava Sheva,New York,20ft,2480,31
+AtlasSea Carriers,Nhava Sheva,New York,40ft,4510,31
+OceanLink Lines,Nhava Sheva,Savannah,20ft,2440,33
+OceanLink Lines,Nhava Sheva,Savannah,40ft,4230,33
+BlueWave Shipping,Nhava Sheva,Savannah,20ft,2360,37
+BlueWave Shipping,Nhava Sheva,Savannah,40ft,4310,37
+GlobalMariner,Nhava Sheva,Savannah,20ft,2640,31
+GlobalMariner,Nhava Sheva,Savannah,40ft,4580,31
+PacificStar Line,Nhava Sheva,Savannah,20ft,2390,35
+PacificStar Line,Nhava Sheva,Savannah,40ft,4200,35
+AtlasSea Carriers,Nhava Sheva,Savannah,20ft,2590,33
+AtlasSea Carriers,Nhava Sheva,Savannah,40ft,4740,33
+OceanLink Lines,Nhava Sheva,Houston,20ft,2550,36
+OceanLink Lines,Nhava Sheva,Houston,40ft,4410,36
+BlueWave Shipping,Nhava Sheva,Houston,20ft,2400,38
+BlueWave Shipping,Nhava Sheva,Houston,40ft,4220,38
+GlobalMariner,Nhava Sheva,Houston,20ft,2810,33
+GlobalMariner,Nhava Sheva,Houston,40ft,5150,33
+PacificStar Line,Nhava Sheva,Houston,20ft,2510,36
+PacificStar Line,Nhava Sheva,Houston,40ft,4520,36
+AtlasSea Carriers,Nhava Sheva,Houston,20ft,2620,35
+AtlasSea Carriers,Nhava Sheva,Houston,40ft,4630,35
+OceanLink Lines,Mundra,Los Angeles,20ft,2120,28
+OceanLink Lines,Mundra,Los Angeles,40ft,3900,28
+BlueWave Shipping,Mundra,Los Angeles,20ft,1970,31
+BlueWave Shipping,Mundra,Los Angeles,40ft,3550,31
+GlobalMariner,Mundra,Los Angeles,20ft,2310,25
+GlobalMariner,Mundra,Los Angeles,40ft,4020,25
+PacificStar Line,Mundra,Los Angeles,20ft,2080,29
+PacificStar Line,Mundra,Los Angeles,40ft,3830,29
+AtlasSea Carriers,Mundra,Los Angeles,20ft,2220,26
+AtlasSea Carriers,Mundra,Los Angeles,40ft,4020,26
+OceanLink Lines,Mundra,New York,20ft,2360,31
+OceanLink Lines,Mundra,New York,40ft,4070,31
+BlueWave Shipping,Mundra,New York,20ft,2240,35
+BlueWave Shipping,Mundra,New York,40ft,3870,35
+GlobalMariner,Mundra,New York,20ft,2600,30
+GlobalMariner,Mundra,New York,40ft,4580,30
+PacificStar Line,Mundra,New York,20ft,2350,33
+PacificStar Line,Mundra,New York,40ft,4310,33
+AtlasSea Carriers,Mundra,New York,20ft,2470,30
+AtlasSea Carriers,Mundra,New York,40ft,4330,30
+OceanLink Lines,Chennai,Savannah,20ft,2590,35
+OceanLink Lines,Chennai,Savannah,40ft,4640,35
+BlueWave Shipping,Chennai,Savannah,20ft,2410,37
+BlueWave Shipping,Chennai,Savannah,40ft,4430,37
+GlobalMariner,Chennai,Savannah,20ft,2680,32
+GlobalMariner,Chennai,Savannah,40ft,4960,32
+PacificStar Line,Chennai,Savannah,20ft,2500,35
+PacificStar Line,Chennai,Savannah,40ft,4330,35
+AtlasSea Carriers,Chennai,Savannah,20ft,2680,33
+AtlasSea Carriers,Chennai,Savannah,40ft,4660,33
+OceanLink Lines,Chennai,Long Beach,20ft,2290,29
+OceanLink Lines,Chennai,Long Beach,40ft,4060,29
+BlueWave Shipping,Chennai,Long Beach,20ft,2100,32
+BlueWave Shipping,Chennai,Long Beach,40ft,3770,32
+GlobalMariner,Chennai,Long Beach,20ft,2390,27
+GlobalMariner,Chennai,Long Beach,40ft,4410,27
+PacificStar Line,Chennai,Long Beach,20ft,2230,31
+PacificStar Line,Chennai,Long Beach,40ft,3870,31
+AtlasSea Carriers,Chennai,Long Beach,20ft,2350,28
+AtlasSea Carriers,Chennai,Long Beach,40ft,4280,28
+OceanLink Lines,Kolkata,Houston,20ft,2590,36
+OceanLink Lines,Kolkata,Houston,40ft,4600,36
+BlueWave Shipping,Kolkata,Houston,20ft,2420,40
+BlueWave Shipping,Kolkata,Houston,40ft,4390,40
+GlobalMariner,Kolkata,Houston,20ft,2770,34
+GlobalMariner,Kolkata,Houston,40ft,4940,34
+PacificStar Line,Kolkata,Houston,20ft,2600,38
+PacificStar Line,Kolkata,Houston,40ft,4510,38
+AtlasSea Carriers,Kolkata,Houston,20ft,2700,36
+AtlasSea Carriers,Kolkata,Houston,40ft,4870,36
+OceanLink Lines,Kolkata,Norfolk,20ft,2450,33
+OceanLink Lines,Kolkata,Norfolk,40ft,4330,33
+BlueWave Shipping,Kolkata,Norfolk,20ft,2360,37
+BlueWave Shipping,Kolkata,Norfolk,40ft,4300,37
+GlobalMariner,Kolkata,Norfolk,20ft,2720,31
+GlobalMariner,Kolkata,Norfolk,40ft,4890,31
+PacificStar Line,Kolkata,Norfolk,20ft,2380,34
+PacificStar Line,Kolkata,Norfolk,40ft,4380,34
+AtlasSea Carriers,Kolkata,Norfolk,20ft,2530,33
+AtlasSea Carriers,Kolkata,Norfolk,40ft,4430,33

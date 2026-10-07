@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="page-header flex-between">
+    <h1>Automated Email Intelligence</h1>
+    <form action="{{ url_for('process_emails') }}" method="POST">
+        <button type="submit" class="btn btn-primary">Process Sample Inbox Batch</button>
+    </form>
+</header>
+
+<div class="kpi-grid">
+    <div class="kpi-card">
+        <div class="kpi-title">Total Processed</div>
+        <div class="kpi-value">{{ stats.processed }}</div>
+    </div>
+    <div class="kpi-card">
+        <div class="kpi-title">Successfully Updated</div>
+        <div class="kpi-value text-green">{{ stats.updated }}</div>
+    </div>
+    <div class="kpi-card">
+        <div class="kpi-title">Safely Skipped</div>
+        <div class="kpi-value text-amber">{{ stats.skipped }}</div>
+    </div>
+    <div class="kpi-card">
+        <div class="kpi-title">Parser Errors</div>
+        <div class="kpi-value text-red">{{ stats.errors }}</div>
+    </div>
+</div>
+
+<div class="card mt-2">
+    <h3>System Processing Logs</h3>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Classification</th>
+                    <th>Result</th>
+                    <th>Reasoning / Action Taken</th>
+                    <th>Payload Snippet</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for log in logs %}
+                <tr>
+                    <td><small>{{ log.timestamp.strftime('%Y-%m-%d %H:%M') }}</small></td>
+                    <td><span class="badge badge-{{ log.classification | lower | replace(' ', '-') }}">{{ log.classification }}</span></td>
+                    <td class="{% if log.result == 'Success' %}text-green{% else %}text-muted{% endif %}">{{ log.result }}</td>
+                    <td>{{ log.reason }}</td>
+                    <td><small class="text-muted">{{ log.email_content[:60] }}...</small></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

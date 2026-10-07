@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="page-header">
+    <h1>Global Operations Dashboard</h1>
+</header>
+
+<div class="kpi-grid">
+    <div class="kpi-card">
+        <div class="kpi-title">Total Shipments</div>
+        <div class="kpi-value">{{ stats.total }}</div>
+    </div>
+    <div class="kpi-card">
+        <div class="kpi-title">In Transit</div>
+        <div class="kpi-value">{{ stats.in_transit }}</div>
+    </div>
+    <div class="kpi-card">
+        <div class="kpi-title">Delivered</div>
+        <div class="kpi-value text-green">{{ stats.delivered }}</div>
+    </div>
+    <div class="kpi-card">
+        <div class="kpi-title">Delayed Alerts</div>
+        <div class="kpi-value text-amber">{{ stats.delayed }}</div>
+    </div>
+</div>
+
+<div class="dashboard-grid">
+    <div class="card">
+        <h3>Critical Exceptions</h3>
+        {% if delayed %}
+            <table class="table">
+                <tr><th>Shipment ID</th><th>Carrier</th><th>Expected</th></tr>
+                {% for s in delayed %}
+                <tr>
+                    <td>{{ s.shipment_id }}</td>
+                    <td>{{ s.carrier }}</td>
+                    <td>{{ s.expected_arrival }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p class="empty-state">No critical shipment delays active.</p>
+        {% endif %}
+    </div>
+
+    <div class="card">
+        <h3>Recent Rate Engine Updates</h3>
+        <table class="table">
+            <tr><th>Carrier</th><th>Lane</th><th>Container</th><th>Rate</th></tr>
+            {% for r in recent_rates %}
+            <tr>
+                <td>{{ r.carrier }}</td>
+                <td>{{ r.origin_port }} → {{ r.destination_port }}</td>
+                <td>{{ r.container_type }}</td>
+                <td>{{ r.rate_usd | currency }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}

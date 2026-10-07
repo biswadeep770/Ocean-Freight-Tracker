@@ -1,0 +1,211 @@
+SAMPLE EMAIL INBOX - OCEAN FREIGHT RATE & SHIPMENT TRACKER
+Use this file to test email-based text parsing (Module 4).
+Each email is separated by a line of dashes.
+Includes rate updates, shipment status updates, and a few
+irrelevant or badly formatted emails that should be skipped.
+======================================================================
+
+Email 1
+From: rates@oceanlinklines.com
+Subject: Rate Update - Nhava Sheva to Los Angeles
+Date: 2026-09-20
+
+Dear Partner,
+
+Please note our revised rate for Nhava Sheva to Los Angeles, 20ft container,
+effective immediately: USD 2260.
+
+Regards,
+OceanLink Lines Pricing Team
+
+----------------------------------------------------------------------
+
+Email 2
+From: pricing@bluewaveshipping.com
+Subject: New Rate - Mundra to New York (40ft)
+Date: 2026-09-22
+
+Hello,
+
+Our 40ft rate for the Mundra - New York route has changed to USD 4150,
+effective from 25 Sep 2026.
+
+Thanks,
+BlueWave Shipping
+
+----------------------------------------------------------------------
+
+Email 3
+From: rates@globalmariner.com
+Subject: Tariff Revision: Chennai-Savannah
+Date: 2026-09-23
+
+Dear Customer,
+
+This is to inform you that the Chennai to Savannah rate (40ft) is now
+USD 4780. Kindly update your records.
+
+Best,
+GlobalMariner Rates Desk
+
+----------------------------------------------------------------------
+
+Email 4
+From: info@pacificstarline.com
+Subject: Rate Notice - Nhava Sheva/Houston
+Date: 2026-09-24
+
+Hi,
+
+New 20ft rate on Nhava Sheva to Houston: USD 2560, valid from 1 Oct 2026.
+
+Regards,
+PacificStar Line
+
+----------------------------------------------------------------------
+
+Email 5
+From: rates@atlasseacarriers.com
+Subject: Rate Change Alert - Kolkata to Norfolk
+Date: 2026-09-26
+
+Dear Partner,
+
+Please be advised: Kolkata to Norfolk, 20ft container, new rate is
+USD 2480 effective immediately.
+
+Regards,
+AtlasSea Carriers Pricing
+
+----------------------------------------------------------------------
+
+Email 6
+From: tracking@bluewaveshipping.com
+Subject: Shipment Status Update - SHP1007
+Date: 2026-09-27
+
+Hello,
+
+This is to inform you that shipment SHP1007 has been delayed due to port
+congestion at New York. Updated status: Delayed.
+
+Thank you,
+BlueWave Shipping Operations
+
+----------------------------------------------------------------------
+
+Email 7
+From: ops@globalmariner.com
+Subject: SHP1008 Status Change
+Date: 2026-09-26
+
+Dear Customer,
+
+Shipment SHP1008 is currently delayed on the Chennai-Savannah route.
+Please plan accordingly.
+
+Regards,
+GlobalMariner Operations
+
+----------------------------------------------------------------------
+
+Email 8
+From: tracking@oceanlinklines.com
+Subject: Delivery Confirmation - SHP1001
+Date: 2026-08-11
+
+Hi,
+
+Shipment SHP1001 has been delivered successfully at Los Angeles on 11 Aug 2026.
+
+Regards,
+OceanLink Lines Tracking
+
+----------------------------------------------------------------------
+
+Email 9
+From: ops@pacificstarline.com
+Subject: Shipment SHP1009 - In Transit Update
+Date: 2026-09-25
+
+Hello,
+
+Shipment SHP1009 has departed Nhava Sheva and is currently in transit to
+Houston. No delays reported.
+
+Thanks,
+PacificStar Line Operations
+
+----------------------------------------------------------------------
+
+Email 10
+From: tracking@atlasseacarriers.com
+Subject: Status Update for SHP1010
+Date: 2026-09-28
+
+Dear Customer,
+
+Please note shipment SHP1010 (Kolkata to Norfolk) is delayed by
+approximately 3 days due to vessel rescheduling.
+
+Regards,
+AtlasSea Carriers
+
+----------------------------------------------------------------------
+
+Email 11
+From: newsletter@maritimeweekly.com
+Subject: This Week in Shipping News
+Date: 2026-09-21
+
+Hi there,
+
+Catch up on this week's top shipping industry headlines, port congestion
+trends, and fuel price updates in our latest newsletter.
+
+Unsubscribe anytime.
+
+----------------------------------------------------------------------
+
+Email 12
+From: hr@oceanlinklines.com
+Subject: Out of Office: Pricing Team
+Date: 2026-09-29
+
+Hello,
+
+The Pricing Team will be out of office from 30 Sep to 2 Oct for a company
+event. For urgent queries, contact your account manager.
+
+Regards,
+OceanLink Lines
+
+----------------------------------------------------------------------
+
+Email 13
+From: rates@bluewaveshipping.com
+Subject: Rate Update
+Date: 2026-09-24
+
+Hi,
+
+Rate for the Mundra route has changed. Please check the attached sheet for
+details. (Note: attachment not included in this sample.)
+
+Thanks,
+BlueWave Shipping
+
+----------------------------------------------------------------------
+
+Email 14
+From: tracking@pacificstarline.com
+Subject: URGENT
+Date: 2026-09-27
+
+shipment delayed again. will update soon.
+pls check portal
+
+- sent from mobile
+
+----------------------------------------------------------------------
+

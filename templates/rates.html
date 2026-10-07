@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="page-header">
+    <h1>Freight Rate Comparison</h1>
+</header>
+
+<div class="card">
+    <form action="{{ url_for('rates') }}" method="GET" class="search-form">
+        <div class="form-group">
+            <label>Origin Port</label>
+            <select name="origin_port" required>
+                <option value="">Select Origin</option>
+                {% for port in origins %}
+                <option value="{{ port }}" {% if query.origin == port %}selected{% endif %}>{{ port }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Destination Port</label>
+            <select name="destination_port" required>
+                <option value="">Select Destination</option>
+                {% for port in destinations %}
+                <option value="{{ port }}" {% if query.dest == port %}selected{% endif %}>{{ port }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Equipment</label>
+            <select name="container_type" required>
+                <option value="">Select Type</option>
+                <option value="20ft" {% if query.container == '20ft' %}selected{% endif %}>20ft Container</option>
+                <option value="40ft" {% if query.container == '40ft' %}selected{% endif %}>40ft Container</option>
+            </select>
+        </div>
+        <div class="form-group button-group">
+            <button type="submit" class="btn btn-primary">Search Rates</button>
+        </div>
+    </form>
+</div>
+
+{% if query.origin %}
+<div class="card mt-2">
+    <h3>Available Carriers</h3>
+    {% if results %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Carrier</th>
+                    <th>Transit Time</th>
+                    <th>Rate (USD)</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for rate in results %}
+                <tr class="{% if loop.first %}row-cheapest{% endif %}">
+                    <td>{{ rate.carrier }}</td>
+                    <td>
+                        {% if rate.transit_days %}
+                            {{ rate.transit_days }} Days
+                        {% else %}
+                            N/A
+                        {% endif %}
+                    </td>
+                    <td class="rate-price font-bold">{{ rate.rate_usd | currency }}</td>
+                    <td>
+                        {% if loop.first %}
+                            <span class="badge badge-cheapest">Cheapest Option</span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p class="empty-state">No rates found for the selected routing. Try a different combination.</p>
+    {% endif %}
+</div>
+{% endif %}
+{% endblock %}

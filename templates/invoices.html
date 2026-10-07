@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="page-header">
+    <h1>Freight Invoice Checker</h1>
+</header>
+
+<div class="card">
+    <p>Select a shipment and enter the final invoice amount to audit against the current contracted rate schedule.</p>
+    <form action="{{ url_for('invoices') }}" method="POST" class="search-form mt-2">
+        <div class="form-group">
+            <label>Select Shipment</label>
+            <select name="shipment_id" id="shipment_select" required>
+                <option value="" data-invoice="">-- Choose Shipment --</option>
+                {% for s in shipments %}
+                <option value="{{ s.shipment_id }}" data-invoice="{{ s.invoice_amount_usd }}" {% if selected_shp and selected_shp.shipment_id == s.shipment_id %}selected{% endif %}>
+                    {{ s.shipment_id }} ({{ s.carrier }})
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Invoice Amount (USD)</label>
+            <input type="number" step="0.01" name="invoice_amount" id="invoice_input" required value="{{ request.form.get('invoice_amount', '') }}">
+        </div>
+        <div class="form-group button-group">
+            <button type="submit" class="btn btn-primary">Audit Invoice</button>
+        </div>
+    </form>
+</div>
+
+{% if result %}
+<div class="card mt-2">
+    {% if result.error %}
+        <div class="alert alert-error">{{ result.error }}</div>
+    {% else %}
+        <div class="audit-grid">
+            <div class="audit-details">
+                <h3>Shipment Profile</h3>
+                <p><strong>ID:</strong> {{ selected_shp.shipment_id }}</p>
+                <p><strong>Lane:</strong> {{ selected_shp.origin_port }} to {{ selected_shp.destination_port }}</p>
+                <p><strong>Equipment:</strong> {{ selected_shp.container_type }}</p>
+            </div>
+            
+            <div class="audit-financials">
+                <div class="financial-row">
+                    <span>Contracted Rate:</span>
+                    <strong>{{ result.contracted | currency }}</strong>
+                </div>
+                <div class="financial-row">
+                    <span>Invoice Amount:</span>
+                    <strong>{{ result.invoice | currency }}</strong>
+                </div>
+                <div class="financial-divider"></div>
+                <div class="financial-row audit-result {% if result.status == 'Correct' %}text-green{% else %}text-red{% endif %}">
+                    <span>Audit Status:</span>
+                    <span>
+                        {% if result.status == 'Correct' %}
+                            <strong>Correct</strong>
+                        {% else %}
+                            <strong>Overcharged by {{ result.difference | currency }}</strong>
+                        {% endif %}
+                    </span>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endif %}
+
+<script>
+    // Autofill invoice amount for user convenience, whilst keeping it fully editable.
+    document.getElementById('shipment_select').addEventListener('change', function() {
+        var selected = this.options[this.selectedIndex];
+        var amt = selected.getAttribute('data-invoice');
+        if(amt) {
+            document.getElementById('invoice_input').value = amt;
+        }
+    });
+</script>
+{% endblock %}

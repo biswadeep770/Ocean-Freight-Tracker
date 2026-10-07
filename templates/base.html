@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Freight Control</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+</head>
+<body>
+    {% if session.get('user_id') %}
+    <div class="layout-wrapper">
+        <aside class="sidebar">
+            <div class="brand">OFC Platform</div>
+            <nav class="nav-menu">
+                <a href="{{ url_for('dashboard') }}" class="nav-link">Dashboard</a>
+                <a href="{{ url_for('rates') }}" class="nav-link">Rate Search</a>
+                <a href="{{ url_for('shipments') }}" class="nav-link">Shipments</a>
+                <a href="{{ url_for('invoices') }}" class="nav-link">Invoice Checker</a>
+                {% if current_role == 'Admin' %}
+                <a href="{{ url_for('emails') }}" class="nav-link admin-link">Email Intelligence</a>
+                {% endif %}
+                <a href="{{ url_for('logout') }}" class="nav-link logout">Logout ({{ current_user }})</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="flash-container">
+                    {% for category, message in messages %}
+                        <div class="flash flash-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+            
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+    {% else %}
+        {% block login %}{% endblock %}
+    {% endif %}
+    
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
